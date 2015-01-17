@@ -16,12 +16,10 @@ SET pitchD TO 0.
 SET yawP TO 0.
 SET yawD TO 0.
 
-SET rollP TO 0.
-SET rollD TO 0.
 
 until 1=2 {
 
-	run orientvector(SHIP:VELOCITY:ORBIT,pitchP,pitchD, yawP, yawD, rollP, rollD).
+	run orientvector(SHIP:VELOCITY:ORBIT,pitchP,pitchD, yawP, yawD).
 
 	wait 0.05.
 	ON AG7 set A to 7.
@@ -34,13 +32,10 @@ SET pitchD TO 0.004.
 set yawP TO 0.004.
 set yawD TO 0.004.
 
-SET rollP TO 0.04.
-SET rollD TO 0.04.
-
 PRINT "Pointing prograde." at (0,20).
 until 1=2 {
 
-	run orientvector(SHIP:VELOCITY:ORBIT,pitchP,pitchD, yawP, yawD, rollP, rollD).
+	run orientvector(SHIP:VELOCITY:ORBIT,pitchP,pitchD, yawP, yawD).
 
 	wait 0.05.
 	ON AG1 set A to 1.
@@ -49,7 +44,7 @@ until 1=2 {
 PRINT "Pointing towards the sun." at (0,21).
 until 1=2 {
 
-	run orientvector(SUN:POSITION,pitchP,pitchD, yawP, yawD, rollP, rollD).
+	run orientvector(SUN:POSITION,pitchP,pitchD, yawP, yawD).
 	wait 0.05.
 
 	ON AG2 set A to 2.
@@ -58,7 +53,7 @@ until 1=2 {
 PRINT "Pointing V(1,0,0)." at (0,22).
 until 1=2 {
 
-	run orientvector( V(1,0,0),pitchP,pitchD, yawP, yawD, rollP, rollD ).
+	run orientvector( V(1,0,0),pitchP,pitchD, yawP, yawD).
 	wait 0.05.
 
 	ON AG3 set A to 3.
@@ -68,7 +63,7 @@ until 1=2 {
 PRINT "Pointing V(0,1,0)." at (0,23).
 until 1=2 {
 
-	run orientvector(V(0,1,0),pitchP,pitchD, yawP, yawD, rollP, rollD).
+	run orientvector(V(0,1,0),pitchP,pitchD, yawP, yawD).
 	wait 0.05.
 
 	ON AG4 set A to 4.
@@ -78,7 +73,7 @@ until 1=2 {
 PRINT "Pointing V(0,0,1)." at (0,24).
 until 1=2 {
 
-	run orientvector(V(0,0,1),pitchP,pitchD, yawP, yawD, rollP, rollD).
+	run orientvector(V(0,0,1),pitchP,pitchD, yawP, yawD).
 	wait 0.05.
 
 	ON AG5 set A to 3.
